@@ -12,6 +12,7 @@ jobs:
   build:
     permissions:
       contents: write
+    if: github.repository_owner == 'boa-dev'
     strategy:
       matrix:
         include:
