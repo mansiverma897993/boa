@@ -8,7 +8,7 @@ use std::{path::Path, time::Duration};
 
 #[cfg(all(target_arch = "x86_64", target_os = "linux", target_env = "gnu"))]
 #[global_allocator]
-static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+static ALLOC: rusty_alloc_api::RustyAlloc = rusty_alloc_api::RustyAlloc;
 
 #[cfg(target_os = "macos")]
 #[global_allocator]
